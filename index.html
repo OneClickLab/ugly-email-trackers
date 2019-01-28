@@ -33,7 +33,7 @@
       }
 
       async componentDidMount() {
-        const request = await fetch('http://trackers.uglyemail.com/list.json');
+        const request = await fetch('https://trackers.uglyemail.com/list.json');
         const { pixels } = await request.json();
 
         const list = Object.entries(pixels).map(([ identifier, name ]) => ({ identifier, name }));

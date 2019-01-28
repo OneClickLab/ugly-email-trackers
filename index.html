@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ugly Email Trackers</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-center py-5">
+        <h1 class="display-4">Ugly Email Trackers</h1>
+        <p class="lead">List of supported Ugly Email trackers.</p>
+        <a href="https://github.com/OneClickLab/ugly-email-trackers/issues/new" class="btn btn-primary">Suggest Pixel</a>
+      </div>
+    </div>
+    <div id="app" class="row"></div>
+  </div>
+  
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+  <script type="text/babel">
+    class App extends React.Component {
+      constructor(props) {
+        super(props);
+
+        this.state = {
+          list: []
+        };
+      }
+
+      async componentDidMount() {
+        const request = await fetch('http://trackers.uglyemail.com/list.json');
+        const { pixels } = await request.json();
+
+        const list = Object.entries(pixels).map(([ identifier, name ]) => ({ identifier, name }));
+
+        this.setState({ list });
+      }
+
+      render() {
+        const Rows = this.state.list.map(({ identifier, name }, i) => 
+          <tr key={i}>
+            <td>{name}</td>
+            <td>{identifier}</td>
+          </tr>
+        );
+
+        return (
+          <div className="col-8 mx-auto">
+            <table className="table table-striped">
+              <thead>
+                <tr>
+                  <th width="100%">Name</th>
+                  <th>Identifier</th>
+                </tr>
+              </thead>
+              <tbody>
+                {Rows}
+              </tbody>
+            </table>
+          </div>
+        );
+      }
+    }
+
+    ReactDOM.render(<App />, document.getElementById('app'));
+  </script>
+</body>
+</html>

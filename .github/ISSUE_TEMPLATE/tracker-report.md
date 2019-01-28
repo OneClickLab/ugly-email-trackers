@@ -1,10 +1,11 @@
 ---
 name: Tracker Report
-about: Suggest trackers
-title: "[TRACKER]"
+about: Suggest a new tracker
+title: "[TRACKER] "
 labels: tracker
 assignees: sonnyt
 
 ---
 
-
+**Name:**
+**URL:**

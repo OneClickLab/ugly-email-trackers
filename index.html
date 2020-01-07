@@ -8,7 +8,7 @@
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 </head>
 <body>
-  <div class="container">
+  <div id="app" class="container">
     <div class="row">
       <div class="col-12 text-center py-5">
         <h1 class="display-4">Ugly Email Trackers</h1>
@@ -16,58 +16,45 @@
         <a href="https://github.com/OneClickLab/ugly-email-trackers/issues/new?assignees=sonnyt&labels=tracker&template=tracker-report.md&title=%5BTRACKER%5D+" class="btn btn-primary">Suggest Pixel</a>
       </div>
     </div>
-    <div id="app" class="row"></div>
+    <div class="row">
+      <div class="col-8 mx-auto">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th width="100%">Name</th>
+              <th>Identifier</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="pixel in pixels">
+              <td>{{pixel[0]}}</td>
+              <td>{{pixel[1]}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
   
-  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
-  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
-  <script type="text/babel">
-    class App extends React.Component {
-      constructor(props) {
-        super(props);
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script>
+    var app = new Vue({
+      el: '#app',
+      data: {
+        pixels: []
+      },
+      created() {
+        var _self = this;
 
-        this.state = {
-          list: []
-        };
+        fetch('https://trackers.uglyemail.com/list.json')
+          .then(function(request) {
+            return request.json();
+          })
+          .then(function(res) {
+            _self.pixels = Object.entries(res.pixels);
+          });
       }
-
-      async componentDidMount() {
-        const request = await fetch('https://trackers.uglyemail.com/list.json');
-        const { pixels } = await request.json();
-
-        const list = Object.entries(pixels).map(([ identifier, name ]) => ({ identifier, name }));
-
-        this.setState({ list });
-      }
-
-      render() {
-        const Rows = this.state.list.map(({ identifier, name }, i) => 
-          <tr key={i}>
-            <td>{name}</td>
-            <td>{identifier}</td>
-          </tr>
-        );
-
-        return (
-          <div className="col-8 mx-auto">
-            <table className="table table-striped">
-              <thead>
-                <tr>
-                  <th width="100%">Name</th>
-                  <th>Identifier</th>
-                </tr>
-              </thead>
-              <tbody>
-                {Rows}
-              </tbody>
-            </table>
-          </div>
-        );
-      }
-    }
-
-    ReactDOM.render(<App />, document.getElementById('app'));
+    });
   </script>
 </body>
 </html>

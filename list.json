@@ -1,5 +1,5 @@
 {
-  "version": "2.0.1",
+  "version": 1,
   "pixels": {
     "\/track\/open.php\\?u=": "MailChimp",
     "\/wf\/open\\?upn=": "SendGrid",

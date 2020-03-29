@@ -27,8 +27,13 @@
     "Marketo": "\/trk\\?t=",
     "Return Path": "returnpath.net\/pixel.gif",
     "Outreach": "outrch.com\/api\/mailings\/opened",
-    "Intercom": "via.intercom-mail-(.*).com\/o\\?",
+    "Intercom": "(via.intercom-mail-(.*).com\/o\\?)|(intercom-mail.com\/via\/o\/)",
     "Mailjet": "\/\/links.(.*)\/oo\/",
-    "Nethunt": "https:\/\/nethunt.com\/api\/v1\/track\/email\/"
+    "Nethunt": "https:\/\/nethunt.com\/api\/v1\/track\/email\/",
+    "Superhuman": "r.superhuman.com",
+    "ConvertKit": "convertkit-mail.com\/o\/",
+    "Apple": "apple.com/report/2/its_mail_sf",
+    "Fast Mail": "list-manage.com/track/open.php",
+    "Fresh Mail": "mail.(.*).pl\/o\/"
   }
 }

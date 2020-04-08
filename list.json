@@ -34,6 +34,15 @@
     "ConvertKit": "convertkit-mail.com\/o\/",
     "Apple": "apple.com/report/2/its_mail_sf",
     "Fast Mail": "list-manage.com/track/open.php",
-    "Fresh Mail": "mail.(.*).pl\/o\/"
+    "Fresh Mail": "mail.(.*).pl\/o\/",
+    "ActiveCampaign": "/lt.php(.*)?l=open/",
+    "AWeber": "openrate.aweber.com",
+    "Getnotify": "email81.com/case",
+    "GrowthDot": "growthdot.com/api/mail-tracking",
+    "FreshMail": "//o/(\\w){10,}/(\\w){10,}/",
+    "Hubspot": "t.hubspotemail.net",
+    "Mailspring": "getmailspring.com/open",
+    "Mandrill": "mandrillapp.com/track",
+    "Mixpanel": "api.mixpanel.com/track"
   }
 }

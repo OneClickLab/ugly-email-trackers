@@ -27,15 +27,15 @@
           </thead>
           <tbody>
             <tr v-for="pixel in pixels">
-              <td>{{pixel[0]}}</td>
-              <td>{{pixel[1]}}</td>
+              <td>{{pixel.key}}</td>
+              <td>{{pixel.val}}</td>
             </tr>
           </tbody>
         </table>
       </div>
     </div>
   </div>
-  
+
   <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
   <script>
     var app = new Vue({
@@ -46,12 +46,17 @@
       created() {
         var _self = this;
 
-        fetch('https://trackers.uglyemail.com/list.json')
+        fetch('https://trackers.uglyemail.com/list.txt')
           .then(function(request) {
-            return request.json();
+            return request.text();
           })
           .then(function(res) {
-            _self.pixels = Object.entries(res.pixels);
+            const pixels = res.split('\n').map((row) => {
+              const [key, val] = row.split('@@=');
+              return { key, val };
+            });
+
+            _self.pixels = pixels;
           });
       }
     });

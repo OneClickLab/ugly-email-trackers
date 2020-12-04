@@ -36,28 +36,38 @@
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.min.js"></script>
   <script>
     var app = new Vue({
       el: '#app',
       data: {
         pixels: []
       },
-      created() {
-        var _self = this;
+      created: function() {
+        var fetchList = function(callback) {
+          var xmlhttp = new XMLHttpRequest();
 
-        fetch('https://trackers.uglyemail.com/list.txt')
-          .then(function(request) {
-            return request.text();
-          })
-          .then(function(res) {
-            const pixels = res.split('\n').map((row) => {
-              const [key, val] = row.split('@@=');
-              return { key, val };
-            });
+          xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+              callback(xmlhttp.responseText);
+            }
+          };
 
-            _self.pixels = pixels;
+          xmlhttp.open('GET', 'https://trackers.uglyemail.com/list.txt', true);
+          xmlhttp.send();
+        };
+
+        fetchList(function(res) {
+          var pixels = res.split('\n').map(function(row) {
+            var response = row.split('@@=');
+            return {
+              key: response[0],
+              val: response[1]
+            };
           });
+
+          this.pixels = pixels;
+        }.bind(this));
       }
     });
   </script>

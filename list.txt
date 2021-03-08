@@ -1,4 +1,4 @@
-MailChimp@@=\/track\/open\.php\?u=
+MailChimp@@=\/track\/open\.php\?u=|list-manage\.com
 SendGrid@@=\/wf\/open\?upn=
 Drip@@=dripemail2
 Mailgun@@=\/o\/
@@ -8,7 +8,7 @@ Yesware@@=t\.yesware\.com
 Postmark@@=pstmrk\.it\/open
 Sidekick@@=t\.signauxtrois\.com|sidekickopen
 TinyLetter@@=tinyletterapp\.com
-MixMax@@=(email|track)\.mixmax\.com
+MixMax@@=(email|track)\.mixmax\.com|mixmax\.com\/api\/track\/|mixmax\.com\/e\/o
 MailTrack@@=mltrk\.io\/pixel\/|mailtrack\.io\/trace\/mail\/
 ToutApp@@=toutapp\.com
 Litmus@@=emltrk\.com
@@ -16,7 +16,7 @@ Boomerang@@=mailstat\.us\/tr
 ContactMonkey@@=contactmonkey\.com\/api\/v1\/tracker
 Cirrus Insight@@=tracking\.cirrusinsight\.com
 ConvertKit@@=\/\/open\.convertkit-mail[1-9]\.com
-Polymail@@=polymail\.io(\/v2\/z\/)?
+Polymail@@=polymail\.io(\/v2\/z\/)?|share\.polymail\.io
 YAMM@@=yamm-track\.appspot
 GetResponse@@=\/open\.html\?x=
 phpList@@=\/ut\.php\?u=
@@ -24,22 +24,31 @@ Close.io@@=close\.io\/email_opened
 Constant Contact@@=\.net\/on\.jsp\?
 Marketo@@=\/trk\?t=
 Return Path@@=returnpath\.net\/pixel\.gif
-Outreach@@=outrch\.com\/api\/mailings\/opened
+Outreach@@=(outrch|whosen|getoutreach)\.com\/api\/mailings\/opened
 Intercom@@=\/\/(.*).intercom-\w+.com(\/via)?\/[a-z]\/
-Mailjet@@=\/\/links\..*\/oo\/|\.mjt\.lu\/
+Mailjet@@=\/\/links\..*\/oo\/|\.mjt\.lu\/|\/oo\/.*\.gif
 Nethunt@@=nethunt\.com\/api\/v1\/track\/email\/
 Superhuman@@=r\.superhuman\.com
 ConvertKit@@=convertkit-mail\.com\/o\/
 Apple@@=apple\.com\/report\/2\/its_mail_sf
 Fast Mail@@=list-manage.com/track/open\.php
 Fresh Mail@@=mail\.(great-news|mailnews)\.pl\/o\/.*
-ActiveCampaign@@=/lt\.php(.*)?l=open/
+ActiveCampaign@@=/lt\.php(.*)\?l=open
 AWeber@@=openrate\.aweber.com
 Getnotify@@=email81\.com/case
 GrowthDot@@=growthdot\.com\/api\/mail-tracking
-Hubspot@@=t\.hubspotemail\.net
+Hubspot@@=t\.hubspotemail\.net|hubspotstarter\.net|t\.(hubspotemail|hubspotfree|signaux|senal|signale|sidekickopen|sigopn|hsmsdd)|t.strk\d{2}\.email|track\.getsidekick\.com|\/e2t\/(o|c|to)\/
 Mailspring@@=getmailspring\.com\/open
 Mandrill@@=mandrillapp\.com\/track
-Mixpanel@@=api\.mixpanel\.com\/track
+Mixpanel@@=mixpanel\.com\/(trk|track)
 SparkPost@@=go\.sparkpostmail2\.com\/q\/
-Salesforce@@=\/\/click\..*\/open\.aspx
+Salesforce@@=\/\/click\..*\/open\.aspx|salesforceiq\.com\/t.png|beacon\.krxd\.net
+PersistIQ@@=infinite-stream-5194\.herokuapp\.com\/pixel\/
+Sailthru@@=sailthru\.com\/trk
+TrackApp@@=trackapp\.io\/static\/img\/track\.gif|trackapp\.io\/[a-z]\/
+Sendinblue@@=sendibw{2}\.com\/track\/
+Segment@@=email\.segment\.com\/e\/o\/
+SalesLoft@@=salesloft\.com\/email_trackers|salesloftlinks\.com\/t\/
+SalesHandy@@=saleshandy\.com\/web\/email\/countopened
+Shopify@@=\/tools\/emails\/open\/
+Amazon SES@@=\/\w*I0\/\w{16}-\w{8}-\w{4}

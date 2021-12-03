@@ -52,3 +52,4 @@ SalesLoft@@=salesloft\.com\/email_trackers|salesloftlinks\.com\/t\/
 SalesHandy@@=saleshandy\.com\/web\/email\/countopened
 Shopify@@=\/tools\/emails\/open\/
 Amazon SES@@=\/\w*I0\/\w{16}-\w{8}-\w{4}
+Humanpredictions@@=trinsly\.humanpredictions\.io

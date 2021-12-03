@@ -54,3 +54,4 @@ Shopify@@=\/tools\/emails\/open\/
 Amazon SES@@=\/\w*I0\/\w{16}-\w{8}-\w{4}
 Humanpredictions@@=trinsly\.humanpredictions\.io
 BrainTrust@@=tracking\.usebraintrust\.com
+Newoldstamp@@=img\.newoldstamp\.com

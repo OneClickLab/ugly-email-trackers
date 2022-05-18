@@ -25,7 +25,7 @@ Constant Contact@@=\.net\/on\.jsp\?
 Marketo@@=\/trk\?t=
 Return Path@@=returnpath\.net\/pixel\.gif
 Outreach@@=(outrch|whosen|getoutreach)\.com\/api\/mailings\/opened
-Intercom@@=\/\/(.*).intercom-\w+.com(\/via)?\/[a-z]\/
+Intercom@@=\/\/(.*).intercom-\w+.com(\/via)?\/
 Mailjet@@=\/\/links\..*\/oo\/|\.mjt\.lu\/|\/oo\/.*\.gif
 Nethunt@@=nethunt\.com\/api\/v1\/track\/email\/
 Superhuman@@=r\.superhuman\.com

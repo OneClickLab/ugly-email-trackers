@@ -1,26 +1,26 @@
 MailChimp@@=\/track\/open\.php\?u=|list-manage\.com
 SendGrid@@=\/wf\/open\?upn=
 Drip@@=dripemail2
-Mailgun@@=\/o\/
+Mailgun@@=\/e\/o\/([0-9a-zA-Z+/]{4})*(([0-9a-zA-Z+/]{2}==)|([0-9a-zA-Z+/]{3}=))?
 Streak@@=mailfoogae\.appspot\.com
 Bananatag@@=bl-1\.com
 Yesware@@=t\.yesware\.com
 Postmark@@=pstmrk\.it\/open
 Sidekick@@=t\.signauxtrois\.com|sidekickopen
 TinyLetter@@=tinyletterapp\.com
-MixMax@@=(email|track)\.mixmax\.com|mixmax\.com\/api\/track\/|mixmax\.com\/e\/o
+MixMax@@=(email|track)\.mixmax\.com|mixmax\.com\/api\/track\/|mixmax\.com\/e\/o|\/\/tracking.*\/api\/track\/v2\/
 MailTrack@@=mltrk\.io\/pixel\/|mailtrack\.io\/trace\/mail\/
 ToutApp@@=toutapp\.com
 Litmus@@=emltrk\.com
 Boomerang@@=mailstat\.us\/tr
 ContactMonkey@@=contactmonkey\.com\/api\/v1\/tracker
 Cirrus Insight@@=tracking\.cirrusinsight\.com
-ConvertKit@@=\/\/open\.convertkit-mail[1-9]\.com
+ConvertKit@@=\/\/(.*)\.convertkit-mail([1-9])?\.com\/o\/
 Polymail@@=polymail\.io(\/v2\/z\/)?|share\.polymail\.io
 YAMM@@=yamm-track\.appspot
 GetResponse@@=\/open\.html\?x=
 phpList@@=\/ut\.php\?u=
-Close.io@@=close\.io\/email_opened
+Close.io@@=close\.io\/email_opened|\/\/ml\.closeml\.com\/t\/\w+\/\w+\.png
 Constant Contact@@=\.net\/on\.jsp\?
 Marketo@@=\/trk\?t=
 Return Path@@=returnpath\.net\/pixel\.gif
@@ -29,10 +29,9 @@ Intercom@@=\/\/(.*).intercom-\w+.com(\/via)?\/
 Mailjet@@=\/\/links\..*\/oo\/|\.mjt\.lu\/|\/oo\/.*\.gif
 Nethunt@@=nethunt\.com\/api\/v1\/track\/email\/
 Superhuman@@=r\.superhuman\.com
-ConvertKit@@=convertkit-mail\.com\/o\/
 Apple@@=apple\.com\/report\/2\/its_mail_sf
-Fast Mail@@=list-manage.com/track/open\.php
-Fresh Mail@@=mail\.(great-news|mailnews)\.pl\/o\/.*
+Fast Mail@@=list-manage.com\/track\/open\.php
+Fresh Mail@@=\/o\/\w{10}\/\w{10}\/
 ActiveCampaign@@=/lt\.php(.*)\?l=open
 AWeber@@=openrate\.aweber.com
 Getnotify@@=email81\.com/case
@@ -52,3 +51,8 @@ SalesLoft@@=salesloft\.com\/email_trackers|salesloftlinks\.com\/t\/
 SalesHandy@@=saleshandy\.com\/web\/email\/countopened
 Shopify@@=\/tools\/emails\/open\/
 Amazon SES@@=\/\w*I0\/\w{16}-\w{8}-\w{4}
+Cooper Press@@=\/open\/\d{3}\/\w{10}
+Sare@@=\/\/(.*)\.enewsletter\.pl\/(.*)\.gif
+Selligent@@=\/optiext\/optiextension\.dll\?ID=
+Technolutions@==\/\/mx\.technolutions\.net\/ss\/o\/(.*)\/ho\.gif
+Vocus@@=\/\/tracking\.vocus\.io\/

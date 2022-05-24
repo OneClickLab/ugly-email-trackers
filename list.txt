@@ -54,5 +54,5 @@ Amazon SES@@=\/\w*I0\/\w{16}-\w{8}-\w{4}
 Cooper Press@@=\/open\/\d{3}\/\w{10}
 Sare@@=\/\/(.*)\.enewsletter\.pl\/(.*)\.gif
 Selligent@@=\/optiext\/optiextension\.dll\?ID=
-Technolutions@==\/\/mx\.technolutions\.net\/ss\/o\/(.*)\/ho\.gif
+Technolutions@@=\/\/mx\.technolutions\.net\/ss\/o\/(.*)\/ho\.gif
 Vocus@@=\/\/tracking\.vocus\.io\/
